@@ -1,21 +1,19 @@
-.projects{
-   
+.projects {
+  &__sidebar {
+    display: flex;
+    align-items: start;
+    gap: 0.7rem;
+    color: #607b96;
+    width: 201px;
+    height: 94vh;
+    border-right: 1px solid #607b96;
+    padding: 20px 10px;
+  }
 
-    &__sidebar{
-        display: flex;
-        align-items: start;
-        gap: .7rem;
-        color: #607B96;
-        width: 201px;
-        height: 94vh;
-        border-right: 1px solid #607B96;
-        padding: 20px 10px;
-    }
-
-    &__label{
-        display: flex;
-        align-items: center;
-        margin-top: 10px;
-        gap: 0.4rem;
-    }
+  &__label {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 0.4rem;
+  }
 }

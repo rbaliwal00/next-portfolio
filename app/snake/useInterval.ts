@@ -1,10 +1,10 @@
 // Custom Hook by Dan Abramov
 "use client";
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef } from "react";
 
 export function useInterval(callback: any, delay: any) {
-  const savedCallback = useRef();
+  const savedCallback = useRef<any>();
 
   // Remember the latest callback.
   useEffect(() => {
