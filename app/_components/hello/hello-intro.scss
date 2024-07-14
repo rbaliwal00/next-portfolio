@@ -1,0 +1,30 @@
+.intro{
+
+    &__first{
+        font-size: 1rem;
+        font-weight: bold;
+        color: #FFF;
+    }
+
+    &__name{
+        font-size: 3rem;
+        // font-weight: bold;
+        color: #FFF;
+    }
+
+    &__position{
+        font-size: 1.5rem;
+        color: #4D5BCE;
+        margin-bottom: 1rem;
+    }
+
+    &__description{
+        margin-top: 50px;
+        color: #43D9AD;
+    }
+
+    &__tech{
+        margin-top: 20px;
+        color: #E99287;
+    }
+}

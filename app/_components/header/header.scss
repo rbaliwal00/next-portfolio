@@ -1,0 +1,45 @@
+.header {
+    color: #607B96;
+
+
+    &-item{
+        border-left: 1px solid #607B96;
+        // border-right: 1px solid #607B96;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+        align-self: center;
+        padding: 4px 0;
+    }
+
+    &-brand{
+        padding-left: 20px;
+        align-items: center;
+        padding: 4px 0;
+
+        font-weight: 800;
+    }
+
+    &-projects{
+        border-right: 1px solid #607B96;
+        margin-right: auto ;
+    }
+
+    &-contact{
+        margin-left: auto;
+        border-left: 1px solid #607B96;
+        text-align: center;
+        padding: 4px 30px;
+    }
+}
+
+.header-container {
+    display: grid;
+    grid-template-columns: 180px repeat(3, 120px) minmax(50px,1fr);
+    border-bottom: 1px solid #607B96;
+    padding: 0px 20px;
+}
+
+.active{
+    color: white;
+}

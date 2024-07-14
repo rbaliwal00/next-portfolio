@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    background-color: #011627;
+}
+
+.main__container{
+    display: grid;
+    grid-template-columns: 1fr 1fr  ;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.btn{
+    border-radius: 0.5em;
+}
+
+.btn-primary{
+    background: #FEA55F;
+    padding: .5rem 1rem;
+    color: #01080E;
+}
+
+.btn-secondary{
+    padding: .5rem 1rem;
+    color: #fff;
+}
+
+
+@import "snake/board";
+@import "_components/header/header";
+@import "_components/footer/footer";
+@import "_components/hello/hello-intro";
+@import "projects/projects";
