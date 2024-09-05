@@ -1,0 +1,10 @@
+export * as ReactIcon from "./Logos/reactjs-line.svg";
+export * as NextIcon from "./Logos/nextjs-line.svg";
+export * as NodeIcon from "./Logos/nodejs-line.svg";
+export * as HTMLIcon from "./Development/html5-line.svg";
+export * as CSSIcon from "./Development/css3-line.svg";
+export * as AngularIcon from "./Logos/angularjs-line.svg";
+export * as GatsbyIcon from "./Logos/gatsby-line.svg";
+export * as JavaIcon from "./Logos/java-line.svg";
+export * as AWSIcon from "./Logos/amazon-line.svg";
+export * as GithubIcon from "./Logos/github-line.svg";

@@ -1,0 +1,38 @@
+.project__card {
+  width: 300px;
+  height: 220px;
+  border: 1px solid #1e2d3d;
+  color: #607b96;
+  background: #011221;
+  border-radius: 15px;
+  position: relative;
+  overflow: hidden;
+
+  &-content {
+    padding: 00px 14px;
+    font-size: 14px;
+    margin-top: 10px;
+  }
+
+  &-btns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 8px;
+    position: absolute;
+    bottom: 10px;
+  }
+
+  &-btn-git {
+    border-radius: 50%;
+    background-color: #c2baba5f;
+    padding: 5px;
+    margin-left: 120px;
+  }
+
+  &-img {
+    width: 300px;
+    height: 110px;
+    background-size: cover;
+    object-fit: cover;
+  }
+}
