@@ -18,7 +18,7 @@ const Projects = () => {
           }
         }
       }
-      const filtered = Array.from(set);
+      const filtered: any = Array.from(set);
       setFilteredProjects(filtered);
     } else if (tags.length === 0) {
       setFilteredProjects(PROJECTS);

@@ -15,7 +15,7 @@ type ProjectProps = {
   image: string;
 };
 
-const ProjectCard = ({ data }: ProjectProps) => {
+const ProjectCard = ({ data }: any) => {
   return (
     <div>
       <div className="project__card__title">{data.name}</div>
