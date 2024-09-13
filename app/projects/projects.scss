@@ -6,9 +6,10 @@
 
   &__content {
     padding: 20px;
+    // margin-left: 20px;
     width: 100%;
     height: 94vh;
-    overflow-y: scroll;
+    overflow-y: auto;
   }
 
   &__title {

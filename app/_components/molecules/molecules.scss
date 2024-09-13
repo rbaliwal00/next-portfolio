@@ -8,9 +8,13 @@
   position: relative;
   overflow: hidden;
 
+  &__title {
+    color: white;
+  }
+
   &-content {
     padding: 00px 14px;
-    font-size: 14px;
+    font-size: 12px;
     margin-top: 10px;
   }
 

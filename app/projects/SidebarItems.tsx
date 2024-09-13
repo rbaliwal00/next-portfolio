@@ -3,9 +3,7 @@ import React, { useState } from "react";
 import { SIDEBAR_ITEMS } from "./sidebar-constants";
 import CustomCheckbox from "../_components/molecules/CustomCheckbox";
 
-const SidebarItems = () => {
-  const [tags, setTags] = useState<string[]>([]);
-
+const SidebarItems = ({ data, tags, setTags }: any) => {
   return (
     <div className="projects__sidebar">
       {SIDEBAR_ITEMS.map((item) => (

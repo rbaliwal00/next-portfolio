@@ -39,13 +39,13 @@ export const SIDEBAR_ITEMS = [
     id: 5,
     name: "CSS",
     icon: CSSIcon,
-    tag: "mongodb",
+    tag: "css",
   },
   {
     id: 6,
     name: "Angular",
     icon: AngularIcon,
-    tag: "mongodb",
+    tag: "angular",
   },
   {
     id: 7,
