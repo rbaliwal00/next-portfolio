@@ -1,3 +1,3 @@
-import blog from './blog'
+import {blogType} from './blog'
 
-export const schemaTypes = [blog]
+export const schemaTypes = [blogType]

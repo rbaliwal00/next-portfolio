@@ -1,4 +1,6 @@
-export default {
+import {defineType, defineField} from 'sanity'
+
+export const blogType = defineType({
   name: 'blog',
   type: 'document',
   title: 'Blog',
@@ -34,7 +36,13 @@ export default {
         {
           type: 'block',
         },
+        {
+          type: 'code',
+        },
+        {
+          type: 'image',
+        },
       ],
     },
   ],
-}
+})
