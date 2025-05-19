@@ -19,7 +19,7 @@ const Header = () => {
 
         <Link
           href="/blogs"
-          className={`link ${pathname === "/blogs" ? "active" : ""}  `}
+          className={`link ${pathname === "/blogs" || pathname.startsWith("/blog") ? "active" : ""}  `}
         >
           <div className="header-projects header-item">_blogs</div>
         </Link>
