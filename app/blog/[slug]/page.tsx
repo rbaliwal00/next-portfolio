@@ -3,6 +3,10 @@ import { client, urlFor } from "@/app/lib/sanity";
 import Image from "next/image";
 import { PortableText, PortableTextComponents } from "next-sanity";
 
+import Prism from "prismjs";
+import "prismjs/components/prism-java";
+import "prismjs/themes/prism-tomorrow.css";
+
 async function getBlog(slug: string) {
   const query = `*[_type == "blog" && slug.current == '${slug}']{
   "currentSlug" : slug.current,
@@ -15,44 +19,15 @@ async function getBlog(slug: string) {
   return data;
 }
 
-const con = [
-  {
-    _type: "block",
-    style: "normal",
-    children: [
-      {
-        _type: "span",
-        text: "Here is a simple example of a REST API controller in Spring Boot:",
-        marks: [],
-      },
-    ],
-    markDefs: [],
-    _key: "intro-paragraph",
-  },
-  {
-    _type: "code",
-    _key: "spring-api-codeblock",
-    language: "java",
-    code: '@RestController\n@RequestMapping("/api")\npublic class UserController {\n\n    @GetMapping("/get-user")\n    public String getUser() {\n        throw new NullPointerException("Throwing NullPointerException for Testing");\n    }\n}',
-  },
-  {
-    _type: "block",
-    style: "normal",
-    children: [
-      {
-        _type: "span",
-        text: "This controller will throw a 500 error when the endpoint is accessed.",
-        marks: [],
-      },
-    ],
-    markDefs: [],
-    _key: "after-code",
-  },
-];
-
 const components: PortableTextComponents = {
   types: {
     code: ({ value }) => {
+      const highlightedCode = Prism.highlight(
+        value.code,
+        Prism.languages[value.language || "java"],
+        value.language || "java",
+      );
+
       return (
         <div className="my-4">
           {value?.filename && (
@@ -60,8 +35,11 @@ const components: PortableTextComponents = {
               {value.filename}
             </div>
           )}
-          <pre className="bg-gray-900 text-green-200 p-4 overflow-x-auto text-sm rounded-md font-mono whitespace-pre-wrap">
-            <code>{value.code}</code>
+          <pre className="bg-gray-900 p-4 overflow-x-auto text-sm rounded-md font-mono">
+            <code
+              className={`language-${value.language || "java"}`}
+              dangerouslySetInnerHTML={{ __html: highlightedCode }}
+            />
           </pre>
         </div>
       );
@@ -95,7 +73,6 @@ export default async function BlogArticle({
 }) {
   const data: blogArticle = await getBlog(params.slug);
 
-  console.log(data.content);
   return (
     <div className="mt-8 p-2">
       <h1>
@@ -116,7 +93,7 @@ export default async function BlogArticle({
         className="m-auto rounded-lg mt-8 border"
       />
 
-      <div className="mt-6 m-auto prose prose-md prose-invert prose-li:marker:text-primary">
+      <div className="mt-6 m-auto prose prose-sm md:prose-lg prose-code:text-green-300 prose-pre:bg-gray-900 prose-invert prose-li:marker:text-primary">
         <PortableText value={data.content} components={components} />
       </div>
     </div>
