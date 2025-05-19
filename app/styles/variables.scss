@@ -1,0 +1,7 @@
+$tab-width: 1024px;
+
+@mixin tab {
+  @media (max-width: #{$tab-width}) {
+    @content;
+  }
+}
