@@ -1,30 +1,49 @@
-.intro{
+.intro {
+  margin-top: 1rem;
 
-    &__first{
-        font-size: 1rem;
-        font-weight: bold;
-        color: #FFF;
-    }
+  &__first {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #fff;
+  }
 
-    &__name{
-        font-size: 3rem;
-        // font-weight: bold;
-        color: #FFF;
-    }
+  &__name {
+    font-size: 3rem;
+    color: #fff;
+  }
 
-    &__position{
-        font-size: 1.5rem;
-        color: #4D5BCE;
-        margin-bottom: 1rem;
-    }
+  &__position {
+    font-size: 1.5rem;
+    color: #4d5bce;
+    margin-bottom: 1rem;
 
-    &__description{
-        margin-top: 50px;
-        color: #43D9AD;
+    @include tab {
+      margin-bottom: 0.5rem;
     }
+  }
 
-    &__tech{
-        margin-top: 20px;
-        color: #E99287;
+  &__description {
+    margin-top: 50px;
+    color: #43d9ad;
+
+    @include tab {
+      margin-top: 2rem;
     }
+  }
+
+  &__tech {
+    margin-top: 20px;
+    color: #e99287;
+
+    &_info {
+      font-size: 0.9rem;
+      color: white;
+      margin-top: 1rem;
+    }
+  }
+
+  @include tab {
+    height: 70vh;
+    align-content: center;
+  }
 }

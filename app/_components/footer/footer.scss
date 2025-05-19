@@ -1,34 +1,58 @@
-.footer{
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 200px  repeat(2,80px) 1fr 180px;
-    align-items: center;
-    color: #607B96;
-    border-top: 1px solid #607B96;
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 200px repeat(2, 80px) 1fr 180px;
+  align-items: center;
+  color: #607b96;
+  border-top: 1px solid #607b96;
+  justify-content: center;
+
+  @include tab {
+    display: flex;
+    border-top: 0;
+    justify-content: end;
+    margin-bottom: 1rem;
+  }
+
+  &__item {
+    border-left: 1px solid #607b96;
+    padding: 4px 10px;
+    display: flex;
     justify-content: center;
+    gap: 10px;
+    align-items: center;
 
-    &__item{
-        border-left: 1px solid #607B96;
-        padding: 4px 10px;
-        display: flex;
-        justify-content: center;
-        gap: 10px;
-        align-items: center;
-    
+    @include tab {
+      border-left: 0px;
     }
+  }
 
-    &__find-me{
-        padding-left: 20px;
-    }
+  &__find-me {
+    padding-left: 20px;
 
-    &__instagram{   
-        border-right: 1px solid #607B96;
+    @include tab {
+      display: none;
     }
+  }
 
-    &__github{
-        text-align: center;
-        color: aqua;
+  &__instagram {
+    border-right: 1px solid #607b96;
+
+    @include tab {
+      border-right: 0;
     }
+  }
+
+  &__word {
+    @include tab {
+      display: none;
+    }
+  }
+
+  &__github {
+    text-align: center;
+    color: aqua;
+  }
 }

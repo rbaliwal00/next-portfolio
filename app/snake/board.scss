@@ -102,3 +102,9 @@
 .eaten {
   background: rgba(255, 255, 255, 0.2);
 }
+
+@media screen and (max-width: 1000px) {
+  .board-container {
+    display: none;
+  }
+}
