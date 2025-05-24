@@ -1,4 +1,4 @@
-import {defineType, defineField} from 'sanity'
+import {defineType} from 'sanity'
 
 export const blogType = defineType({
   name: 'blog',
@@ -11,12 +11,27 @@ export const blogType = defineType({
       title: 'Title of blog article',
     },
     {
+      name: 'featured',
+      type: 'boolean',
+      title: 'Featured',
+    },
+    {
       name: 'slug',
       type: 'slug',
       title: 'Slug of your blog article',
       options: {
         source: 'title',
       },
+    },
+    {
+      name: 'previousSlug',
+      type: 'slug',
+      title: 'Previous Slug',
+    },
+    {
+      name: 'nextSlug',
+      type: 'slug',
+      title: 'Next Slug',
     },
     {
       name: 'titleImage',
