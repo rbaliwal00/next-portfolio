@@ -1,12 +1,7 @@
-import React from "react";
-import { client, urlFor } from "../lib/sanity";
-import { simpleBlogCard } from "../lib/interface";
-import { Card, CardContent } from "@/components/ui/card";
-import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
 import BlogCard from "../_components/BlogCard/BlogCard";
 import BlogCardSmall from "../_components/BlogCard/BlogCardSmall";
+import { simpleBlogCard } from "../lib/interface";
+import { client } from "../lib/sanity";
 
 async function getBlogs() {
   const query = `
@@ -31,7 +26,7 @@ const Blogs = async () => {
   const data = await getBlogs();
 
   return (
-    <div className="w-[90%] md:w-[80%] mx-auto mt-14">
+    <div className="w-[90%] md:w-[80%] mx-auto mt-14 mb-12">
       <>
         <div className="text-2xl md:text-4xl text-white font-bold">
           Featured Posts
@@ -60,14 +55,20 @@ const Blogs = async () => {
           </Card>
         ))} */}
         </div>
-        <div className="grid lg:grid-cols-2 grid-rows-2 gap-6">
+        <div className="grid lg:grid-cols-2 grid-rows-2 gap-x-6 gap-y-1">
           <div className="row-span-2 bg-gray-200 ">
             <BlogCard blog={data[0]} />
           </div>
-          <div className="bg-gray-300 ">
+          <div className="row-span-2 bg-gray-200 md:hidden">
+            <BlogCard blog={data[0]} />
+          </div>
+          <div className="row-span-2 bg-gray-200 md:hidden">
+            <BlogCard blog={data[0]} />
+          </div>
+          <div className="bg-gray-300 hidden md:block ">
             <BlogCardSmall blog={data[0]} />
           </div>
-          <div className="bg-gray-400">
+          <div className="bg-gray-400 hidden md:block ">
             <BlogCardSmall blog={data[0]} />
           </div>
         </div>

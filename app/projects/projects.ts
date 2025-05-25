@@ -1,12 +1,10 @@
 import {
-  Demo,
-  Project_Smartle,
   Project_Horecah,
   Project_Natour,
   Project_Nexter,
-  Project_Trello,
-  Project_IssueTracker,
   Project_OldPortfolio,
+  Project_Smartle,
+  Project_Trello,
 } from "@/app/_assets";
 
 export const PROJECTS = [

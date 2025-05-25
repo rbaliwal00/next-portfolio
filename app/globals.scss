@@ -10,9 +10,37 @@
 @import "projects/projects";
 @import "snake/board";
 @import "styles/fonts.scss";
+@import "about/about.scss";
 
 :root {
   background-color: #011627;
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(
+      rgba(69, 243, 191, 0.835),
+      rgba(67, 217, 173, 0.13)
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .text-gradient-2 {
+    background: linear-gradient(rgba(0, 255, 204, 1), rgba(102, 255, 204, 0.8));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@layer components {
+  .gradient-btn {
+    @apply text-white font-bold rounded px-4 py-2;
+    background: linear-gradient(
+      rgba(69, 243, 191, 0.835),
+      rgba(67, 217, 173, 0.13)
+    );
+  }
 }
 
 @layer base {

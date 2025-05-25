@@ -10,7 +10,7 @@ const BlogCardSmall = ({ blog }: { blog: simpleBlogCard }) => {
   return (
     <Card
       key={blog.currentSlug}
-      className="bg-white flex items-center overflow-hidden"
+      className="flex items-center overflow-hidden bg-[#0f172a] text-white border border-slate-700 rounded-lg shadow-lg hover:shadow-blue-500/20 transition-shadow duration-300"
     >
       <Image
         src={urlFor(blog.titleImage).url()}
@@ -20,8 +20,10 @@ const BlogCardSmall = ({ blog }: { blog: simpleBlogCard }) => {
         className="object-cover rounded-t-lg hidden md:block"
       />
       <CardContent className="mt-2">
-        <h3 className="text-md line-clamp-2 font-bold">{blog.title}</h3>
-        <p className="text-sm text-slate-600 line-clamp-3 mt-2">
+        <h3 className="text-lg font-bold font-mono text-blue-400 line-clamp-2 text-gradient">
+          {blog.title}
+        </h3>
+        <p className="text-sm text-slate-400 font-mono line-clamp-3 mt-2">
           {blog.smallDescription}
         </p>
         <Button asChild className="h-8 rounded-md px-3 text-xs mt-2 w-full">

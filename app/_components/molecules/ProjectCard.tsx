@@ -1,8 +1,6 @@
-import { Demo } from "@/app/_assets";
 import { GithubIcon } from "@/app/icons";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
 type ProjectProps = {
   id: number;
