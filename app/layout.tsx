@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
 import { Fira_Code } from "next/font/google";
-import "./globals.scss";
-import Header from "./_components/header/Header";
 import Footer from "./_components/footer/Footer";
-import { Analytics } from "@vercel/analytics/next";
+import Header from "./_components/header/Header";
+import "./globals.scss";
 
 const inter = Fira_Code({ subsets: ["latin"] });
 

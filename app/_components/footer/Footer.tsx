@@ -1,12 +1,17 @@
+"use client";
 import Image from "next/image";
 import React from "react";
 import Instagram from "../../icons/Logos/instagram-fill.svg";
 import LinkedIn from "../../icons/Logos/linkedin-fill.svg";
 import Github from "../../icons/Logos/github-fill.svg";
+import { usePathname } from "next/navigation";
+import { is } from "date-fns/locale";
 
 const Footer = () => {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   return (
-    <footer className="footer">
+    <footer className={`footer ${isHome ? "fixed" : ""}`}>
       <div className="footer__find-me">find me in:</div>
       <div className="footer__item">
         <a
