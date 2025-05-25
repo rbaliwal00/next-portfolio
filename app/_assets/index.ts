@@ -30,7 +30,7 @@ export * as Redux from "./icons8-redux-96.png";
 export * as SpringBoot from "./icons8-spring-boot-80.png";
 export * as Nest from "./icons8-nestjs-480.png";
 export * as College from "./college.jpeg";
-export * as SketchBook from "./SketchBook.png";
+export * as SketchBook from "./Sketchbook.png";
 export * as HorecahTeam from "./HorecahTeam.jpeg";
 export * as VectorstackTeam from "./Vectorstack.jpeg";
 export * as SixSvg from "./six.svg";
